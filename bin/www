@@ -4,4 +4,4 @@ const { port } = require("../config");
 
 const app = require("../app");
 
-app.listen(port, () => console.log(`Live on port ${port}`))
+app.listen(port, () => console.log(`Live on port ${port}`));
