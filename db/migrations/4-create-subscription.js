@@ -13,14 +13,17 @@ module.exports = {
 				allowNull: false,
 				references: { model: "Users" },
 			},
-			service: {
+			type: {
 				type: Sequelize.STRING,
+				allowNull: false,
 			},
 			company: {
 				type: Sequelize.STRING,
+				allowNull: false,
 			},
 			amount: {
 				type: Sequelize.INTEGER,
+				allowNull: false,
 			},
 			createdAt: {
 				allowNull: false,

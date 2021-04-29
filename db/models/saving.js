@@ -9,12 +9,16 @@ module.exports = (sequelize, DataTypes) => {
       Saving.belongsTo(models.User, { foreignKey: "userId" });
     }
   };
-  Saving.init({
-    userId: DataTypes.INTEGER,
-    amount: DataTypes.INTEGER
-  }, {
-    sequelize,
-    modelName: 'Saving',
-  });
+  Saving.init(
+		{
+			userId: { type: DataTypes.INTEGER, allowNull: false },
+			amount: { type: DataTypes.INTEGER, allowNull: false },
+			bank: { type: DataTypes.STRING, allowNull: false },
+		},
+		{
+			sequelize,
+			modelName: "Saving",
+		}
+	);
   return Saving;
 };

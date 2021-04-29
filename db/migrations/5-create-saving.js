@@ -13,8 +13,13 @@ module.exports = {
 				allowNull: false,
 				references: { model: "Users" },
 			},
+			bank: {
+				type: Sequelize.STRING,
+				allowNull: false,
+			},
 			amount: {
 				type: Sequelize.INTEGER,
+				allowNull: false,
 			},
 			createdAt: {
 				allowNull: false,

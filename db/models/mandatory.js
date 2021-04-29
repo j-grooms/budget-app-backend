@@ -9,10 +9,10 @@ module.exports = (sequelize, DataTypes) => {
 	}
 	Mandatory.init(
 		{
-			userId: DataTypes.INTEGER,
-			service: DataTypes.STRING,
-			company: DataTypes.STRING,
-			amount: DataTypes.INTEGER,
+			userId: { type: DataTypes.INTEGER, allowNull: false },
+			type: { type: DataTypes.STRING, allowNull: false },
+			company: { type: DataTypes.STRING, allowNull: false },
+			amount: { type: DataTypes.INTEGER, allowNull: false },
 		},
 		{
 			sequelize,
