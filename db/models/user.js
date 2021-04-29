@@ -38,8 +38,10 @@ module.exports = (sequelize, DataTypes) => {
 			return await User.scope("currentUser").findByPk(user.id);
 		}
 		static associate(models) {
-
-      // MODELS
+      User.hasMany(models.Mandatory, { foreignKey: "userId", onDelete: "cascade", hooks: "true"});
+      User.hasMany(models.Saving, { foreignKey: "userId", onDelete: "cascade", hooks: "true"});
+      User.hasMany(models.Subscription, { foreignKey: "userId", onDelete: "cascade", hooks: "true"});
+      User.hasMany(models.Discretionary, { foreignKey: "userId", onDelete: "cascade", hooks: "true"});
 
 		}
 	}
