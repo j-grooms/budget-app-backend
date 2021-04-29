@@ -2,12 +2,13 @@ Users
 -
 id int PK
 username unique varchar(32)
-password hash
+email unique varchar(256)
+password binary
 firstName varchar(16)
 lastName varchar(16)
 monthlyIncome int
 
-Essentials
+Mandatories
 -
 id pk int
 userId FK >- Users.id
@@ -23,7 +24,7 @@ type varchar(16)
 company varchar(32)
 amount int
 
-Discretionary
+Discretionaries
 -
 id pk int
 userId FK >- Users.id
@@ -36,4 +37,3 @@ Savings
 id pk int
 userId FK >- Users.id
 amount int
-
